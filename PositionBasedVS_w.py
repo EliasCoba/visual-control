@@ -52,7 +52,7 @@ if __name__ == "__main__":
     camera2.setPosition(init_pitch, init_yaw, init_roll, init_x_pos, init_y_pos, init_z_pos)
     p2, wf_2_if_2, Ext_2 = camera2.projection(w_points)
     
-    exit
+    #exit
     # Timing parameters
     dt = 0.01   # Time Delta, seconds.
     t0 = 0      # Start time of the simulation
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         #PASO 3.INCLUIR LAS ECUACIONES DEL ERROR Y DEL CONTROLADOR
         U        = np.zeros((6,1))                     
         U[1, 0]  = -U[1, 0] # Inverse control due the the camera framework
-        error_e  = np.linalg.norm(e)
+        #error_e  = np.linalg.norm(e)
  
         #Avoiding numerical error
         U[np.abs(U) < 1.0e-9] = 0.0
